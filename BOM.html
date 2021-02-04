@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS的BOM对象</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>目标：</h1>
+        <ul>
+            <li>
+                1.了解Browser对象的Navigator <br />
+                2.了解各浏览器的内核<br /> 
+                3.判断当前浏览器是否是chrome，不是给下载链接<br />
+            </li>
+        </ul>
+        <p></p>
+        <!-- <script src="js/bom.js"> -->
+        <script>
+            var browser=navigator.appName; //浏览器名称
+            var bVersion=navigator.appVersion; //浏览器版本
+            var isCookie=navigator.cookieEnabled; //返回指明浏览器中是否启用 cookie 的布尔值。 
+            var bPlatform=navigator.platform    //返回运行浏览器的操作系统平台。
+
+            document.write("浏览器名称："+browser+"<br />");
+            document.write("浏览器版本:"+bVersion+"<br />");
+            document.write("是否启用 cookie:"+isCookie+"<br />");
+            document.write("操作系统平台:"+bPlatform+"<br />");
+
+
+            // 2.判断当前浏览器是否是chrome，不是给下载链接
+            let isChrome=(bVersion.indexOf("Chrome")==-1) ? false : true ; 
+            document.write("当前浏览器是否是chrome:"+isChrome);
+        </script>
+    </body>
+</html>
